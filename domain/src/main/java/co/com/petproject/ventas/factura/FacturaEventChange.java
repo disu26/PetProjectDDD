@@ -5,7 +5,10 @@ import co.com.sofka.domain.generic.EventChange;
 
 public final class FacturaEventChange extends EventChange {
     public FacturaEventChange(Factura factura) {
-        apply((FacturaCreada event) -> factura.fecha = event.getFecha());
+        apply((FacturaCreada event) -> {
+            factura.fecha = event.getFecha();
+            factura.productoId = event.getProductoId();
+        });
 
         apply((VendedorAgregado event) -> {
             var vendedorId = event.getVendedorId();

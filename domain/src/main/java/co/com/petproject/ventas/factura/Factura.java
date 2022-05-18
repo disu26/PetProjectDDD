@@ -18,9 +18,9 @@ public class Factura extends AggregateEvent<FacturaId> {
     protected Fecha fecha;
     protected TotalPagar totalPagar;
 
-    public Factura(FacturaId facturaId, Fecha fecha) {
+    public Factura(FacturaId facturaId, ProductoId productoId, Fecha fecha) {
         super(facturaId);
-        appendChange(new FacturaCreada(fecha)).apply();
+        appendChange(new FacturaCreada(fecha, productoId)).apply();
         subscribe(new FacturaEventChange(this));
     }
 
@@ -33,10 +33,6 @@ public class Factura extends AggregateEvent<FacturaId> {
         var factura = new Factura(facturaId);
         events.forEach(factura::applyEvent);
         return factura;
-    }
-
-    public void agregarProducto(){
-
     }
 
     public void agregarVendedor(Nombre nombre, Ubicacion ubicacion, Telefono telefono){
@@ -95,5 +91,9 @@ public class Factura extends AggregateEvent<FacturaId> {
 
     public TotalPagar totalPagar() {
         return totalPagar;
+    }
+
+    public ProductoId productoId() {
+        return productoId;
     }
 }
