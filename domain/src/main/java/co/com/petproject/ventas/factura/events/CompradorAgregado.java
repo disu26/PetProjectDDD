@@ -4,7 +4,7 @@ import co.com.petproject.ventas.factura.values.Direccion;
 import co.com.petproject.ventas.factura.values.Nombre;
 import co.com.petproject.ventas.factura.values.Telefono;
 import co.com.petproject.ventas.factura.values.CompradorId;
-import co.com.petproject.ventas.factura.values.NombreUsuario;
+import co.com.petproject.ventas.generic.values.NombreUsuario;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public final class CompradorAgregado extends DomainEvent {

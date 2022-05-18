@@ -1,6 +1,6 @@
 package co.com.petproject.ventas.producto;
 
-import co.com.petproject.ventas.forum.ForumId;
+import co.com.petproject.ventas.forum.values.ForumId;
 import co.com.petproject.ventas.producto.events.PrecioActualizado;
 import co.com.petproject.ventas.producto.events.ProductoCreado;
 import co.com.petproject.ventas.producto.events.StockActualizado;

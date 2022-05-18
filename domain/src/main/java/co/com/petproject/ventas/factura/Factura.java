@@ -2,6 +2,8 @@ package co.com.petproject.ventas.factura;
 
 import co.com.petproject.ventas.factura.events.*;
 import co.com.petproject.ventas.factura.values.*;
+import co.com.petproject.ventas.generic.values.Fecha;
+import co.com.petproject.ventas.generic.values.NombreUsuario;
 import co.com.petproject.ventas.producto.values.ProductoId;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;

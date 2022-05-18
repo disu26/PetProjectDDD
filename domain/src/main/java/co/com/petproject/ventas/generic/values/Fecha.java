@@ -1,4 +1,4 @@
-package co.com.petproject.ventas.factura.values;
+package co.com.petproject.ventas.generic.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 

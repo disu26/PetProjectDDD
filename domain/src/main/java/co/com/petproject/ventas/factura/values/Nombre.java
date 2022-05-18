@@ -13,6 +13,10 @@ public final class Nombre implements ValueObject<String> {
         if (this.value.isBlank()){
             throw new IllegalArgumentException("El Nombre no puede estar en blanco");
         }
+
+        if(this.value.length() > 100){
+            throw new IllegalArgumentException("El nombre no permite mas de 200 caracteres");
+        }
     }
 
     public Nombre actualizarNombre(String nombre){

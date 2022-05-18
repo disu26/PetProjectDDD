@@ -1,6 +1,7 @@
 package co.com.petproject.ventas.factura;
 
 import co.com.petproject.ventas.factura.values.*;
+import co.com.petproject.ventas.generic.values.NombreUsuario;
 import co.com.sofka.domain.generic.Entity;
 
 public final class Comprador extends Entity<CompradorId> {

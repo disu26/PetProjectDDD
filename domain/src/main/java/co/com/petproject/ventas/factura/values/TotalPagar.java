@@ -10,11 +10,11 @@ public final class TotalPagar implements ValueObject<Double> {
     public TotalPagar(Double value) {
         this.value = Objects.requireNonNull(value);
 
-        if(this.value.isNaN()){
-            throw new IllegalArgumentException("Ingrese un valor válido");
+        if(value.isNaN()){
+            throw new IllegalArgumentException("Ingrese un valor numerico");
         }
 
-        if(this.value < 0){
+        if(value < 0){
             throw new IllegalArgumentException("El Precio no puede ser negativo");
         }
     }
