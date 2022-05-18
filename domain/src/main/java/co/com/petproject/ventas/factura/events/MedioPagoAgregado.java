@@ -4,7 +4,7 @@ import co.com.petproject.ventas.factura.values.MedioPago;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public final class MedioPagoAgregado extends DomainEvent {
-    private MedioPago medioPago;
+    private final MedioPago medioPago;
 
     public MedioPagoAgregado(MedioPago medioPago) {
         super("co.com.petproject.ventas.factura.MedioPagoAgregado");

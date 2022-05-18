@@ -4,7 +4,7 @@ import co.com.petproject.ventas.factura.values.TotalPagar;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public final class TotalPagarAgregado extends DomainEvent {
-    private TotalPagar totalPagar;
+    private final TotalPagar totalPagar;
 
     public TotalPagarAgregado(TotalPagar totalPagar) {
         super("co.com.petproject.ventas.factura.TotalPagarAgregado");

@@ -5,8 +5,8 @@ import co.com.petproject.ventas.factura.values.VendedorId;
 import co.com.sofka.domain.generic.DomainEvent;
 
 public final class NombreVendedorActualizado extends DomainEvent {
-    private VendedorId vendedorId;
-    private Nombre nombre;
+    private final VendedorId vendedorId;
+    private final Nombre nombre;
 
     public NombreVendedorActualizado(VendedorId vendedorId, Nombre nombre) {
         super("co.com.petproject.ventas.factura.NombreVendedorActualizado");
