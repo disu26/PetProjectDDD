@@ -19,10 +19,6 @@ public final class Nombre implements ValueObject<String> {
         }
     }
 
-    public Nombre actualizarNombre(String nombre){
-        return new Nombre(nombre);
-    }
-
     @Override
     public String value() {
         return value;

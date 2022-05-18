@@ -10,7 +10,7 @@ import co.com.sofka.domain.generic.DomainEvent;
 
 import java.util.List;
 
-public final class Factura extends AggregateEvent<FacturaId> {
+public class Factura extends AggregateEvent<FacturaId> {
     protected ProductoId productoId;
     protected Vendedor vendedor;
     protected Comprador comprador;
@@ -59,6 +59,22 @@ public final class Factura extends AggregateEvent<FacturaId> {
 
     public void actualizarNombreVendedor(VendedorId vendedorId, Nombre nombre){
         appendChange(new NombreVendedorActualizado(vendedorId, nombre)).apply();
+    }
+
+    public void actualizarTelefonoVendedor(VendedorId vendedorId, Telefono telefono){
+        appendChange(new TelefonoVendedorActualizado(vendedorId, telefono)).apply();
+    }
+
+    public void actualizarUbicacionVendedor(VendedorId vendedorId, Ubicacion ubicacion){
+        appendChange(new UbicacionVendedorActualizada(vendedorId, ubicacion)).apply();
+    }
+
+    public void actualizarTelefonoComprador(CompradorId compradorId, Telefono telefono){
+        appendChange(new TelefonoCompradorActualizado(compradorId, telefono)).apply();
+    }
+
+    public void actualizarDireccionComprador(CompradorId compradorId, Direccion direccion){
+        appendChange(new DireccionCompradorActualizado(compradorId, direccion)).apply();
     }
 
     public MedioPago medioPago() {

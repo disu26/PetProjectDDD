@@ -4,7 +4,7 @@ import co.com.petproject.ventas.factura.values.*;
 import co.com.petproject.ventas.generic.values.NombreUsuario;
 import co.com.sofka.domain.generic.Entity;
 
-public final class Comprador extends Entity<CompradorId> {
+public class Comprador extends Entity<CompradorId> {
     protected Nombre nombre;
     protected NombreUsuario nombreUsuario;
     protected Telefono telefono;
@@ -18,5 +18,13 @@ public final class Comprador extends Entity<CompradorId> {
         this.nombreUsuario = nombreUsuario;
         this.telefono = telefono;
         this.direccion = direccion;
+    }
+
+    public void actualizarTelefono(String telefono){
+        this.telefono = new Telefono(telefono);
+    }
+
+    public void actualizarDireccion(String direccion){
+        this.direccion = new Direccion(direccion);
     }
 }

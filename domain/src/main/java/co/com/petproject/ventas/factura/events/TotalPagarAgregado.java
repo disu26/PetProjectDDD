@@ -7,7 +7,7 @@ public final class TotalPagarAgregado extends DomainEvent {
     private final TotalPagar totalPagar;
 
     public TotalPagarAgregado(TotalPagar totalPagar) {
-        super("co.com.petproject.ventas.factura.TotalPagarAgregado");
+        super("co.com.petproject.ventas.factura.events.TotalPagarAgregado");
         this.totalPagar = totalPagar;
     }
 

@@ -18,10 +18,15 @@ public final class FacturaEventChange extends EventChange {
                     event.getDireccion());
         });
 
-        /*apply((NombreVendedorActualizado event) -> {
-            var vendedorId = event.getVendedorId();
-            factura.vendedor  =
-        });*/
+        apply((NombreVendedorActualizado event) -> factura.vendedor.actualizarNombre(event.getNombre().value()));
+
+        apply((TelefonoVendedorActualizado event) -> factura.vendedor.actualizarTelefono(event.getTelefono().value()));
+
+        apply((UbicacionVendedorActualizada event) -> factura.vendedor.actualizarUbicacion(event.getUbicacion().value()));
+
+        apply((TelefonoCompradorActualizado event) -> factura.comprador.actualizarTelefono(event.getTelefono().value()));
+
+        apply((DireccionCompradorActualizado event) -> factura.comprador.actualizarDireccion(event.getDireccion().value()));
 
         apply((MedioPagoAgregado event) -> factura.medioPago = event.getMedioPago());
 
