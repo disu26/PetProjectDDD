@@ -3,7 +3,7 @@ package co.com.petproject.ventas.producto;
 import co.com.petproject.ventas.producto.values.*;
 import co.com.sofka.domain.generic.Entity;
 
-public final class Caracteristica extends Entity<CaracteristicaId> {
+public class Caracteristica extends Entity<CaracteristicaId> {
     protected Marca marca;
     protected Modelo modelo;
     protected Especificaciones especificaciones;
@@ -16,5 +16,13 @@ public final class Caracteristica extends Entity<CaracteristicaId> {
         this.modelo = modelo;
         this.especificaciones = especificaciones;
         this.otros = otros;
+    }
+
+    public void actualizarEspecificaciones(String especificaciones){
+        this.especificaciones = new Especificaciones(especificaciones);
+    }
+
+    public void actualizarOtros(String otros){
+        this.otros = new Otros(otros);
     }
 }
