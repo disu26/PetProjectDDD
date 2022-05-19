@@ -6,7 +6,7 @@ import co.com.petproject.ventas.forum.values.Respuesta;
 import co.com.petproject.ventas.forum.values.Usuario;
 import co.com.sofka.domain.generic.Entity;
 
-public final class Pregunta extends Entity<PreguntaId> {
+public class Pregunta extends Entity<PreguntaId> {
     protected Descripcion descripcion;
     protected Usuario usuario;
     protected Respuesta respuesta;
@@ -17,5 +17,15 @@ public final class Pregunta extends Entity<PreguntaId> {
         this.usuario = usuario;
     }
 
+    public void actualizarDescripcion(String descripcion){
+        this.descripcion = new Descripcion(descripcion);
+    }
 
+    public void agregarRespuesta(Respuesta respuesta){
+        this.respuesta = respuesta;
+    }
+
+    public void actualizarRespuesta(String respuesta){
+        this.respuesta = new Respuesta(respuesta);
+    }
 }

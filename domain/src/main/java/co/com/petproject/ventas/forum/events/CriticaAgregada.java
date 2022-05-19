@@ -2,26 +2,26 @@ package co.com.petproject.ventas.forum.events;
 
 import co.com.petproject.ventas.forum.values.Calificacion;
 import co.com.petproject.ventas.forum.values.Comentario;
-import co.com.petproject.ventas.forum.values.ReseñaId;
+import co.com.petproject.ventas.forum.values.CriticaId;
 import co.com.petproject.ventas.forum.values.Usuario;
 import co.com.sofka.domain.generic.DomainEvent;
 
-public final class ReseñaAgregada extends DomainEvent {
-    private ReseñaId reseñaId;
-    private Comentario comentario;
-    private Usuario usuario;
-    private Calificacion calificacion;
+public final class CriticaAgregada extends DomainEvent {
+    private final CriticaId criticaId;
+    private final Comentario comentario;
+    private final Usuario usuario;
+    private final Calificacion calificacion;
 
-    public ReseñaAgregada(ReseñaId reseñaId, Comentario comentario, Usuario usuario, Calificacion calificacion) {
-        super("co.com.petproject.ventas.forum.events.ReseñaAgregada");
-        this.reseñaId = reseñaId;
+    public CriticaAgregada(CriticaId criticaId, Comentario comentario, Usuario usuario, Calificacion calificacion) {
+        super("co.com.petproject.ventas.forum.events.CriticaAgregada");
+        this.criticaId = criticaId;
         this.comentario = comentario;
         this.usuario = usuario;
         this.calificacion = calificacion;
     }
 
-    public ReseñaId getReseñaId() {
-        return reseñaId;
+    public CriticaId getCriticaId() {
+        return criticaId;
     }
 
     public Comentario getComentario() {
