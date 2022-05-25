@@ -1,5 +1,5 @@
 # PetProjectDDD
-Pet project para el curso de DDD de sofka university
+Pet project para el curso de DDD, este está basado en un e-commerce de informática. Este proyecto se realizó de manera individual.
 
 Big picture, Analisis, Modelo de dominoo y Eventos De Dominio.
 
